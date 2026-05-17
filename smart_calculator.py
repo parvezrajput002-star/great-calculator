@@ -16,21 +16,30 @@ def calculate (  a , operator , b):
             
     return result 
 
-user = input("Enter Exit / Start :")
-try:
-    while True :
-        if user == "exit":
+
+while True :
+    user = input("Enter Exit / Start :")
+    User = user.lower()
+    if User == "exit":
             break
-        operator = input("+ , - , / , * :") 
-        if operator not in ["+" , "-" , "*","/"]:
-            print("not matched !")
-        else:
-            a = int(input("Enter number : "))
-            b = int(input("Enter second number : "))
-            calculator = calculate(a ,operator , b)
-            print(calculator)
-except ValueError as e :
-    print("Enter only numbers !")
+    elif User == "start":
+        while True:
+            operator = input("+ , - , / , * :") 
+            if operator not in ["+" , "-" , "*","/"]:
+                print("not matched !")
+            else:
+                try:
+                    a = int(input("Enter number : "))
+                    b = int(input("Enter second number : "))
+                    calculator = calculate(a ,operator , b)
+                    print(calculator)
+                    break
+                except ValueError as v :
+                    print("put only integer values !")
+                    
+     
+                
+                
     
 
       
