@@ -21,6 +21,7 @@ while True :
     user = input("Enter Exit / Start :")
     User = user.lower()
     if User == "exit":
+            print("--Calculator is closed--")
             break
     elif User == "start":
         while True:
@@ -32,6 +33,7 @@ while True :
                     a = int(input("Enter number : "))
                     b = int(input("Enter second number : "))
                     calculator = calculate(a ,operator , b)
+                    print("--calculation--")
                     print(calculator)
                     break
                 except ValueError as v :
